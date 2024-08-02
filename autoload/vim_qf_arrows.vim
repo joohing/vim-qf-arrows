@@ -1,10 +1,10 @@
 function vim_qf_arrows#SetSigncolFromQf()
+    call sign_unplacelist(sign_getplaced())
+
     if len(getqflist()) == 0
         echo "The quickfix list is empty! (vim-qf-arrows)"
         return
     endif
-
-    call sign_unplacelist(sign_getplaced())
 
     sign define qfresult text=->
     let idx = 1
