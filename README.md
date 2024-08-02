@@ -8,6 +8,18 @@ Well, here you go! I present to you, the magnificent vim-qf-arrows plugin!
 
 Once the plugin is installed, simply call the command `SetSigncolumnFromQf`, and you're good to go. It will place an arrow at all lines in the code where the quickfix-list has a corresponding entry. (Tip: you can write something á la `autocmd QuickfixCmdPost * SetSigncolumnFromQf` to auto-update your signs when doing a command that affects the quickfix list.)
 
+### What does it look like?
+
 Below: the result of running `grep stdout` and then `SetSigncolumnFromQf` on a newly initialized Zig project.
 
 ![A preview of the plugin](./preview.png)
+
+### How do I install it?
+
+E.g. using Plug:
+
+```
+call plug#begin()
+Plug 'joohing/vim-qf-arrows/'
+call plug#end()
+```
