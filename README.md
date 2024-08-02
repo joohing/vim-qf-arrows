@@ -20,6 +20,6 @@ E.g. using Plug:
 
 ```
 call plug#begin()
-Plug 'joohing/vim-qf-arrows/'
+Plug 'joohing/vim-qf-arrows'
 call plug#end()
 ```
