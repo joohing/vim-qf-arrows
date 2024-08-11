@@ -11,7 +11,7 @@ function! vim_qf_arrows#SetSigncolFromQf()
         sign define qfresult text=->
     endif
 
-    sign_placelist(getqflist())
+    call sign_placelist(getqflist())
 
     echo "Placed the arrow markers! (vim-qf-arrows)"
 endfunc
