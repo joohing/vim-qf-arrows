@@ -4,7 +4,7 @@ function! vim_qf_arrows#SetSigncolFromQf()
         return
     endif
 
-    vim_qf_arrows#ClearSigncolumn()
+    call vim_qf_arrows#ClearSigncolumn()
 
     if !len(sign_getdefined("qfarrow"))
         call sign_define("qfarrow", {
