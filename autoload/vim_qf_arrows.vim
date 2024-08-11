@@ -16,7 +16,7 @@ function! vim_qf_arrows#SetSigncolFromQf()
     let signlist = []
 
     for entry in getqflist()
-        let signlist += {'name': 'qfarrow', 'buffer': entry.bufnr, 'lnum': entry.lnum}
+        let signlist += [{'name': 'qfarrow', 'buffer': entry.bufnr, 'lnum': entry.lnum}]
     endfor
 
     echom sign_placelist(signlist)
