@@ -18,9 +18,7 @@ function! vim_qf_arrows#SetSigncolFromQf()
         let signlist += [{'name': 'qfarrow', 'buffer': entry.bufnr, 'lnum': entry.lnum}]
     endfor
 
-    echom sign_placelist(signlist)
-
-    echo "Placed the arrow markers! (vim-qf-arrows)"
+    call sign_placelist(signlist)
 endfunc
 
 function! vim_qf_arrows#ClearSigncolumn()
