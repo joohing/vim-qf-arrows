@@ -1,6 +1,6 @@
 function! vim_qf_arrows#SetSigncolFromQf()
-    let result = sign_unplacelist(sign_getplaced('', {'name': 'qfresult'}))
-    echom "Testing if this works: " . result
+    let result = len(sign_unplacelist(sign_getplaced('', {'name': 'qfresult'})))
+    echom "Removed " . result . "signs"
 
     if len(getqflist()) == 0
         echo "The quickfix list is empty! (vim-qf-arrows)"
