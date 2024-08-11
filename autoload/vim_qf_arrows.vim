@@ -7,7 +7,7 @@ function! vim_qf_arrows#SetSigncolFromQf()
         return
     endif
 
-    if !sign_getdefined("qfresult").len()
+    if !len(sign_getdefined("qfresult"))
         sign define qfresult text=->
     endif
 
