@@ -24,5 +24,5 @@ function! vim_qf_arrows#SetSigncolFromQf()
 endfunc
 
 function! vim_qf_arrows#ClearSigncolumn()
-    sign_unplacelist(sign_getplaced('', {'name': 'qfarrow'}))
+    call sign_unplacelist(sign_getplaced('', {'name': 'qfarrow'}))
 endfunc
