@@ -1,11 +1,10 @@
 function! vim_qf_arrows#SetSigncolFromQf()
-    let result = len(sign_unplacelist(sign_getplaced('', {'name': 'qfarrow'})))
-    echom "Removed " . result . " signs"
-
     if len(getqflist()) == 0
         echo "The quickfix list is empty! (vim-qf-arrows)"
         return
     endif
+
+    vim_qf_arrows#ClearSigncolumn()
 
     if !len(sign_getdefined("qfarrow"))
         call sign_define("qfarrow", {
@@ -22,4 +21,8 @@ function! vim_qf_arrows#SetSigncolFromQf()
     echom sign_placelist(signlist)
 
     echo "Placed the arrow markers! (vim-qf-arrows)"
+endfunc
+
+function! vim_qf_arrows#ClearSigncolumn()
+    sign_unplacelist(sign_getplaced('', {'name': 'qfarrow'}))
 endfunc
